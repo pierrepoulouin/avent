@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 //Definir à notre bdd que User est une entité
 @Entity
@@ -22,7 +22,7 @@ public class User {
 	private String email;
 
 	// Il y aura un ou plusieurs links postés par un user
-	@OneToMany
+	@OneToOne(mappedBy = "users")
 	private List<Link> links;
 
 	public String getFirstName() {

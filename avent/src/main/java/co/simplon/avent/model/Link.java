@@ -27,7 +27,7 @@ public class Link {
 	private LocalDate date;
 
 	// Un user et un seul peut poster un link
-	@OneToOne
+	@ManyToOne
 	private User users;
 
 	public long getId() {
